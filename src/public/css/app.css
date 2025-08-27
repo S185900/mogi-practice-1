@@ -1,0 +1,81 @@
+/* ベースのフォントサイズ(em対応用) */
+/* 1em = 10px */
+/* たとえば 2.4em なら 24px、1.6em なら 16px */
+html {
+    font-size: 62.5%;
+}
+
+/* ベーススタイル（PCサイズ） */
+.app-basic {
+    max-width: 120.0em; /* 中央寄せ＆余白確保 */
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap; /* 要素がはみ出さず折り返せる */
+    gap: 2.0em;
+    flex-direction: column;
+}
+
+.header-basic {
+    display: flex;
+    justify-content: flex-start; /* ロゴの位置調整 */
+    align-items: center;
+    padding: 4.0em 0;
+    background-color: #000000;
+    height: 8.2em;
+    width: 100%;
+    border: 1px solid red;
+}
+
+.header-logo-img {
+    width: 20.0em;
+    height: auto;
+}
+
+.main-content {
+    font-size: 1.8em;
+}
+
+/* PCサイズ（1400〜1540px）での微調整 */
+@media screen and (min-width: 140.0em) and (max-width: 154.0em) {
+    .app-basic {
+        padding: 0 2.4em;
+        /* 余白を少し狭める */
+    }
+
+    .header-basic {
+        padding: 3.6em 0;
+    }
+
+    .main-content {
+        font-size: 1.7em;
+        /* 微調整で読みやすく */
+    }
+}
+
+/* スマホサイズに合わせて調整 */
+@media screen and (max-width: 76.8em) {
+    .app-basic {
+        width: 100%;
+        padding: 0 1.6em;
+        display: block;
+    }
+
+    .header-basic {
+        justify-content: center;
+        padding: 2.0em 0;
+    }
+
+    .header-logo-img {
+        max-width: 100%;
+        width: auto;
+    }
+
+    .main-content {
+        font-size: 1.6em;
+    }
+}
+
+p {
+    color: rgb(213, 128, 0);
+}
